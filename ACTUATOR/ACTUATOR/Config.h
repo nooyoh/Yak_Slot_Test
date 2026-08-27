@@ -68,21 +68,21 @@
 
 #define STEPPER_PORT                PORTA
 #define STEPPER_DDR                 DDRA
-#define STEPPER_X_SHIFT             0U              /* PA0~PA3 (ULN2003 #1) */
-#define STEPPER_Y_SHIFT             4U              /* PA4~PA7 (ULN2003 #2) */
+#define STEPPER_X_SHIFT             0U             
+#define STEPPER_Y_SHIFT             4U              
 #define STEPPER_NIBBLE_MASK         0x0FU
 
-#define STEP_SEQ_LEN                4U              /* Full Drive 2상 여자 4-step */
-#define STEP_INTERVAL_MS            3U              /* 설계서 §4. ★ 탈조 여유 — §6-12 */
+#define STEP_SEQ_LEN                4U              
+#define STEP_INTERVAL_MS            3U             
 
 #define X_MIN_STEPS                 0
 #define X_MAX_STEPS                 1420
 #define Y_MIN_STEPS                 0
-#define DISPENSE_SUB_OFFSET_STEPS   60              /* ★ 실측 필요 (a) */
+#define DISPENSE_SUB_OFFSET_STEPS   60              
 #define Y_MAX_STEPS                 (4600 + DISPENSE_SUB_OFFSET_STEPS)
 
-#define DISPENSE_OFFSET_AXIS        AXIS_Y          /* 설계서 §5 (y-a)/(y)/(y+a) */
-#define STEPPER_RELEASE_ON_IDLE     0               /* ★ 1=코일 해제, 0=유지토크 — §6-8 */
+#define DISPENSE_OFFSET_AXIS        AXIS_Y          
+#define STEPPER_RELEASE_ON_IDLE     0             
 
 /*
  * 좌표 -> 절대 스텝 변환 테이블은 stepper.c 내부 static const 로 둔다.
@@ -116,8 +116,8 @@
 #define SERVO_BIT                   PB5            
 
 #define SERVO_PWM_TOP               39999U          /* ICR1, 50Hz @ prescaler 8 */
-#define SERVO_PULSE_MIN_US          500U            /* ★ 캘리브레이션 대상 */
-#define SERVO_PULSE_MAX_US          2500U           /* ★ 캘리브레이션 대상 */
+#define SERVO_PULSE_MIN_US          500U           
+#define SERVO_PULSE_MAX_US          2500U           
 #define SERVO_ANGLE_MIN             0U
 #define SERVO_ANGLE_MAX             180U
 
@@ -148,7 +148,7 @@
 #define DISPENSE_DETECT_WINDOW_MS   5000UL          /* 3차 5초 감지창 */
 
 /* ==========================================================================
- * 1.8 홈 센서 (설계서 §7)                                           [Team B]
+ * 1.8 홈 센서 (설계서 §7)                                       
  * ========================================================================== */
 
 #define HOME_X_PORT                 PORTD           
