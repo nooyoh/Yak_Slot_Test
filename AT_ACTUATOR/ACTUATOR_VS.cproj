@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <ProjectGuid>b8e4d2f0-6a1c-4b3e-9f7d-2c5a8e1b4d63</ProjectGuid>
     <avrdevice>ATmega128A</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -12,51 +12,22 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>ACTUATOR</AssemblyName>
-    <Name>ACTUATOR</Name>
-    <RootNamespace>ACTUATOR</RootNamespace>
+    <AssemblyName>ACTUATOR_VS</AssemblyName>
+    <Name>ACTUATOR_VS</Name>
+    <RootNamespace>ACTUATOR_VS</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <RamSnippetAddress />
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <OverrideVtorValue />
     <BootSegment>2</BootSegment>
     <ResetRule>0</ResetRule>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <EraseKey />
-    <AsfFrameworkConfig>
-      <framework-data xmlns="">
-        <options />
-        <configurations />
-        <files />
-        <documentation help="" />
-        <offline-documentation help="" />
-        <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
-        </dependencies>
-      </framework-data>
-    </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.stk500</avrtool>
-    <avrtoolserialnumber />
-    <avrdeviceexpectedsignature>0x1E9702</avrdeviceexpectedsignature>
-    <com_atmel_avrdbg_tool_stk500>
-      <ToolOptions>
-        <InterfaceProperties>
-          <IspClock>125000</IspClock>
-        </InterfaceProperties>
-        <InterfaceName>ISP</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.stk500</ToolType>
-      <ToolNumber>
-      </ToolNumber>
-      <ToolName>STK500</ToolName>
-    </com_atmel_avrdbg_tool_stk500>
-    <avrtoolinterface>ISP</avrtoolinterface>
-    <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -142,52 +113,46 @@
     <Compile Include="config.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="dispense.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="dispense.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="fsm.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="homing.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="homing.h">
+    <Compile Include="types.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="sensors.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="sensors.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="servo.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="servo.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="stepper.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="stepper.h">
+    <Compile Include="systick.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="systick.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="systick.h">
+    <Compile Include="stepper.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="types.h">
+    <Compile Include="stepper.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart.h">
+    <Compile Include="servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sensors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="homing.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="homing.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dispense.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dispense.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

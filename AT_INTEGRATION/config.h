@@ -89,7 +89,8 @@
  * 스텝 단위 값이 모듈 밖으로 나가지 않게 하기 위함.
  *
  *   static const uint8_t s_full_drive_seq[STEP_SEQ_LEN] =
- *       { 0b1100, 0b0110, 0b0011, 0b1001 };
+ *       { 0b0011, 0b0110, 0b1100, 0b1001 };   // 검증된 TEST.STEP_MOTOR 와 동일 순서
+ *       // 인덱스 감소(STEP_DIR_MINUS) = 원점 방향
  *   static const int16_t s_x_step_table[SLOT_X_COUNT] = { 0, 1420 };
  *   static const int16_t s_y_step_table[SLOT_Y_COUNT] = { 0, 1200, 2300, 3440, 4600 };
  */
